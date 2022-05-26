@@ -11,6 +11,9 @@ class Country(models.Model):
     name= models.CharField(max_length=80)
     code = models.CharField(max_length=2)
 
+    def __str__(self):
+        return self.name
+
 class Address(models.Model):
     street = models.CharField(max_length=80)
     postal_code=models.CharField(max_length=5)
